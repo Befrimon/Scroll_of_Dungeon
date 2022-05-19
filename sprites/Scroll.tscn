@@ -1,0 +1,61 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://images/scroll/scroll_open_42.png" type="Texture" id=1]
+[ext_resource path="res://images/scroll/scroll_open_41.png" type="Texture" id=2]
+[ext_resource path="res://images/scroll/scroll_open_1.png" type="Texture" id=3]
+[ext_resource path="res://images/scroll/scroll_open_40.png" type="Texture" id=4]
+[ext_resource path="res://images/scroll/scroll_open_6.png" type="Texture" id=5]
+[ext_resource path="res://images/scroll/scroll_open_15.png" type="Texture" id=6]
+[ext_resource path="res://images/scroll/scroll_open_4.png" type="Texture" id=7]
+[ext_resource path="res://images/scroll/scroll_open_3.png" type="Texture" id=8]
+[ext_resource path="res://images/scroll/scroll_open_2.png" type="Texture" id=9]
+[ext_resource path="res://images/scroll/scroll_open_12.png" type="Texture" id=10]
+[ext_resource path="res://images/scroll/scroll_open_13.png" type="Texture" id=11]
+[ext_resource path="res://images/scroll/scroll_open_8.png" type="Texture" id=12]
+[ext_resource path="res://images/scroll/scroll_open_7.png" type="Texture" id=13]
+[ext_resource path="res://images/scroll/scroll_open_11.png" type="Texture" id=14]
+[ext_resource path="res://images/scroll/scroll_open_5.png" type="Texture" id=15]
+[ext_resource path="res://images/scroll/scroll_open_17.png" type="Texture" id=16]
+[ext_resource path="res://images/scroll/scroll_open_16.png" type="Texture" id=17]
+[ext_resource path="res://images/scroll/scroll_open_14.png" type="Texture" id=18]
+[ext_resource path="res://images/scroll/scroll_open_10.png" type="Texture" id=19]
+[ext_resource path="res://images/scroll/scroll_open_9.png" type="Texture" id=20]
+[ext_resource path="res://images/scroll/scroll_open_39.png" type="Texture" id=21]
+[ext_resource path="res://images/scroll/scroll_open_37.png" type="Texture" id=22]
+[ext_resource path="res://images/scroll/scroll_open_36.png" type="Texture" id=23]
+[ext_resource path="res://images/scroll/scroll_open_35.png" type="Texture" id=24]
+[ext_resource path="res://images/scroll/scroll_open_38.png" type="Texture" id=25]
+[ext_resource path="res://images/scroll/scroll_open_23.png" type="Texture" id=26]
+[ext_resource path="res://images/scroll/scroll_open_21.png" type="Texture" id=27]
+[ext_resource path="res://images/scroll/scroll_open_29.png" type="Texture" id=28]
+[ext_resource path="res://images/scroll/scroll_open_26.png" type="Texture" id=29]
+[ext_resource path="res://images/scroll/scroll_open_25.png" type="Texture" id=30]
+[ext_resource path="res://images/scroll/scroll_open_34.png" type="Texture" id=31]
+[ext_resource path="res://images/scroll/scroll_open_22.png" type="Texture" id=32]
+[ext_resource path="res://images/scroll/scroll_open_28.png" type="Texture" id=33]
+[ext_resource path="res://images/scroll/scroll_open_18.png" type="Texture" id=34]
+[ext_resource path="res://images/scroll/scroll_open_33.png" type="Texture" id=35]
+[ext_resource path="res://images/scroll/scroll_open_20.png" type="Texture" id=36]
+[ext_resource path="res://images/scroll/scroll_open_19.png" type="Texture" id=37]
+[ext_resource path="res://images/scroll/scroll_open_31.png" type="Texture" id=38]
+[ext_resource path="res://images/scroll/scroll_open_30.png" type="Texture" id=39]
+[ext_resource path="res://images/scroll/scroll_open_27.png" type="Texture" id=40]
+[ext_resource path="res://images/scroll/scroll_open_24.png" type="Texture" id=41]
+[ext_resource path="res://images/scroll/scroll_open_32.png" type="Texture" id=42]
+[ext_resource path="res://scripts/Scroll.gd" type="Script" id=43]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 42 ), ExtResource( 35 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 28 ), ExtResource( 33 ), ExtResource( 40 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 41 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 27 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 34 ), ExtResource( 17 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 5 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "Open",
+"speed": 50.0
+} ]
+
+[node name="Scroll" type="AnimatedSprite"]
+position = Vector2( 512, 300 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "Open"
+script = ExtResource( 43 )
