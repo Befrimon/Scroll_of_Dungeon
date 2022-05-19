@@ -8,8 +8,7 @@ func _ready():
 
 
 func _process(delta):
-	Const.player_data["hits"] = 100  # Invulnerability
-	
+	# Const.player_data["hits"] = 100  # Invulnerability
 	var delta_x = 0
 	var delta_y = 0
 	if Input.is_action_pressed("right"):
