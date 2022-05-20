@@ -13,6 +13,9 @@
 	  "Music": "Music",
 	  "Sound": "Sounds",
 	  "Lang": "Language"
+	},
+	"buttons": {
+	  "back": "Back"
 	}
   }
 }

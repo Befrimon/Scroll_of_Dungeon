@@ -130,5 +130,6 @@ custom_fonts/font = SubResource( 4 )
 flat = true
 script = ExtResource( 4 )
 
-[connection signal="changed" from="MusicEdit/Slider" to="." method="_on_Music_changed"]
-[connection signal="changed" from="SoundEdit/Slider" to="." method="_on_Sound_changed"]
+[connection signal="value_changed" from="MusicEdit/Slider" to="." method="_on_Music_changed"]
+[connection signal="value_changed" from="SoundEdit/Slider" to="." method="_on_Sound_changed"]
+[connection signal="item_selected" from="LangEdit/ItemBar" to="." method="_on_item_selected"]

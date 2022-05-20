@@ -9,9 +9,23 @@ func _ready():
 		node.text = sett_data["labels"][lab]
 	$MusicEdit/Slider.value = Const.PARAMETERS["music"]
 	$SoundEdit/Slider.value = Const.PARAMETERS["volume"]
+	
+	var button = load("res://sprites/Button.tscn").instance()
+	button.generate("menu", sett_data["buttons"]["back"], [512, 500], [210, 30])
+	button.connect("pressed", self, "to_menu")
+	self.add_child(button)
 
 
-func _on_Music_changed():
-	$MusicEdit/Value.text = str(int($MusicEdit/Slider.value))
-func _on_Sound_changed():
-	$SoundEdit/Value.text = str(int($SoundEdit/Slider.value))
+func to_menu():
+	get_tree().change_scene("res://scenes/Menu.tscn")
+
+func _on_Music_changed(value):
+	$MusicEdit/Value.text = str(value)
+func _on_Sound_changed(value):
+	$SoundEdit/Value.text = str(value)
+
+func _on_item_selected(index):
+	Const.SELECT_LANG = index
+	Const.PARAMETERS["language"] = Const.SHORT_LANG[index]
+	Const.LANGUAGE = Functions.read_json("res://languages/"+Const.PARAMETERS["language"]+".json")
+	get_tree().reload_current_scene()

@@ -10,6 +10,7 @@ func _ready():
 		lang_id += 1
 		var lang = read_json("res://languages/"+file)
 		Const.LANG_LIST.append(lang["title"])
+		Const.SHORT_LANG.append(file.substr(0, 3))
 
 
 func open_dir(path):
