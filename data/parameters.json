@@ -1,9 +1,1 @@
-{
-  "volume": 80,
-  "music": 80,
-  "cursor": "default",
-
-  "is_first": true,
-  "language": "rus",
-  "last_level": 0
-}
+{"cursor":"default","is_first":true,"language":"eng","last_level":0,"music":34,"volume":89}

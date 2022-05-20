@@ -41,3 +41,9 @@ func read_json(path):
 	var data = parse_json(text) 
 	file.close()  
 	return data   
+
+func write_json(path, data):
+	var file = File.new()
+	file.open(path, File.WRITE)
+	file.store_line(to_json(data))
+	file.close()

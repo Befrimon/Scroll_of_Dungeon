@@ -1,7 +1,7 @@
 extends Node
 
-var PARAMETERS = NAN
-var LANGUAGE = NAN
+var PARAMETERS = {}
+var LANGUAGE = {}
 var LANG_LIST = []
 var SHORT_LANG = []
 var SELECT_LANG = -1
