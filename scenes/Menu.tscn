@@ -21,9 +21,6 @@ custom_colors/font_color = Color( 0.843137, 0.843137, 0.843137, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "SCROLL OF DUNGEON"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Menu" type="Sprite" parent="."]
 position = Vector2( 512, 300 )

@@ -1,8 +1,18 @@
 {
   "title": "English",
   "menu": {
-    "play": "Play",
-    "sett": "Settings",
-    "exit": "Exit"
+	"buttons": {
+	  "play": "Play",
+	  "sett": "Settings",
+	  "exit": "Exit"
+	}
+  },
+  "settings": {
+	"title": "Settings",
+	"labels": {
+	  "Music": "Music",
+	  "Sound": "Sounds",
+	  "Lang": "Language"
+	}
   }
 }

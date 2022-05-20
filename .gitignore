@@ -1,3 +1,4 @@
 .import
 Build
-**/*.import
+*.import
+*.ini
