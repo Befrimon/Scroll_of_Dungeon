@@ -2,8 +2,31 @@ extends Node
 
 
 func _ready():
+	var lang_id = 0
 	Const.PARAMETERS = read_json("res://data/parameters.json")
 	Const.LANGUAGE = read_json("res://languages/"+Const.PARAMETERS["language"]+".json")
+	for file in open_dir("res://languages")["files"]:
+		if file.substr(0, 3) == Const.PARAMETERS["language"]: Const.SELECT_LANG = lang_id
+		lang_id += 1
+		var lang = read_json("res://languages/"+file)
+		Const.LANG_LIST.append(lang["title"])
+		Const.SHORT_LANG.append(file.substr(0, 3))
+
+
+func open_dir(path):
+	var dir = Directory.new()
+	var res = {
+		"dirs": [],
+		"files": []
+	}
+	dir.open(path)
+	dir.list_dir_begin()
+	var file_name = dir.get_next()
+	while file_name != "":
+		if dir.current_is_dir(): res["dirs"].append(file_name)
+		else: res["files"].append(file_name)
+		file_name = dir.get_next()
+	return res
 
 
 func _process(delta):
@@ -18,3 +41,9 @@ func read_json(path):
 	var data = parse_json(text) 
 	file.close()  
 	return data   
+
+func write_json(path, data):
+	var file = File.new()
+	file.open(path, File.WRITE)
+	file.store_line(to_json(data))
+	file.close()

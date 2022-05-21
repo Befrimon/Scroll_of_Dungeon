@@ -50,6 +50,11 @@ animations = [ {
 "loop": false,
 "name": "Open",
 "speed": 50.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "NowOpen",
+"speed": 5.0
 } ]
 
 [node name="Scroll" type="AnimatedSprite"]

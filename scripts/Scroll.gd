@@ -4,6 +4,16 @@ var is_anim = false
 var do_anim = false
 
 
+func _ready():
+	if not Const.is_menu_open: return
+	self.get_parent().show_timeout = 0
+	self.rotation_degrees = 0
+	self.scale = Vector2(4, 4)
+	self.play("NowOpen")
+	is_anim = true
+	do_anim = true
+
+
 func _input(event):
 	if event is InputEventMouseButton:
 		var btn_pos = self.position
@@ -27,3 +37,4 @@ func _process(delta):
 		self.play("Open")
 		self.get_parent().show_timeout = 0.82
 	do_anim = true
+	Const.is_menu_open = true

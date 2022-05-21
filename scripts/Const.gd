@@ -1,8 +1,12 @@
 extends Node
 
-var PARAMETERS = NAN
-var LANGUAGE = NAN
+var PARAMETERS = {}
+var LANGUAGE = {}
+var LANG_LIST = []
+var SHORT_LANG = []
+var SELECT_LANG = -1
 
+var is_menu_open = false
 var lamp_count = 0
 
 

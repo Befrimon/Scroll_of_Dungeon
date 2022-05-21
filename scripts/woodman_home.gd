@@ -9,10 +9,13 @@ func _process(delta):
 		$Wardrobe/Texture.play("active")
 	else: $Wardrobe/Texture.play("static")
 	
-	
 	if $Bed/ActionArea.overlaps_body($Player):
 		$Bed/Texture.play("active")
 	else: $Bed/Texture.play("static")
+	
+	if $Darts/ActionArea.overlaps_body($Player):
+		$Darts/Texture.play("active")
+	else: $Darts/Texture.play("static")
 	
 	if $Exit.overlaps_body($Player):
 		get_tree().change_scene("res://scenes/Road.tscn")
