@@ -6,7 +6,7 @@ var ui
 
 
 func _ready():
-	var clr = int(Const.lamp_count/2)+1
+	var clr = int(abs(Const.lamp_count)/2)+1
 	$Dark/AnimationPlayer.current_animation = str(clr)
 	
 	player = load("res://sprites/Player.tscn").instance()
@@ -44,3 +44,10 @@ func _process(_delta):
 	elif player.position.y >= 600:
 		Const.player_data["position"] = [player.position[0], 30]
 		get_tree().reload_current_scene()
+
+func _input(event):
+	if Input.is_action_pressed("pause"):
+		get_tree().paused = true
+		var ps = load("res://sprites/Pause.tscn").instance()
+		add_child(ps)
+

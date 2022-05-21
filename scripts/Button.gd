@@ -9,13 +9,9 @@ func generate(path, content, pos, size):
 	$TextLab.text = content
 	$TextLab.rect_size = Vector2(size[0], size[1])
 	$image.position = Vector2(size[0]/2, size[1]/2)
-	$image.scale = Vector2(2.25, 2.25)
+	$image.scale = Vector2(size[0]/180, size[1]/30)
 	$image.texture = load("res://images/buttons/"+path+"/static.png")
 	image_path = path
 
-func _on_Button_mouse_entered():
-			$image.texture = load("res://images/buttons/"+image_path+"/flow.png")
-
-
-func _on_Button_mouse_exited():
-			$image.texture = load("res://images/buttons/"+image_path+"/static.png")
+func _on_Button_mouse_entered(): $image.texture = load("res://images/buttons/"+image_path+"/flow.png")
+func _on_Button_mouse_exited(): $image.texture = load("res://images/buttons/"+image_path+"/static.png")

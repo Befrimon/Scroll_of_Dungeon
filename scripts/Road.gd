@@ -31,3 +31,8 @@ func _process(delta):
 		player.position.y += player.speed*delta
 	elif player.position.y >= 600:
 		player.position.y -= player.speed*delta
+
+func _input(event):
+	if Input.is_action_pressed("pause"):
+		get_tree().paused = true
+		add_child(load("res://sprites/Pause.tscn").instance())

@@ -11,11 +11,15 @@ func _process(delta):
 	
 	if $Bed/ActionArea.overlaps_body($Player):
 		$Bed/Texture.play("active")
+		if Input.is_action_pressed("interaction"):
+			get_tree().change_scene("res://scenes/GameOver.tscn")
 	else: $Bed/Texture.play("static")
-	
-	if $Darts/ActionArea.overlaps_body($Player):
-		$Darts/Texture.play("active")
-	else: $Darts/Texture.play("static")
 	
 	if $Exit.overlaps_body($Player):
 		get_tree().change_scene("res://scenes/Road.tscn")
+
+
+func _input(event):
+	if Input.is_action_pressed("pause"):
+		get_tree().paused = true
+		add_child(load("res://sprites/Pause.tscn").instance())

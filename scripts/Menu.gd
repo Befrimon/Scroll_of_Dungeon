@@ -16,7 +16,7 @@ func show_ui():
 	var y_pos = 235
 	for btn in menu_data["buttons"]:
 		var button = load("res://sprites/Button.tscn").instance()
-		button.generate("menu", menu_data["buttons"][btn], [512, y_pos], [210, 30])
+		button.generate("menu", menu_data["buttons"][btn], [512, y_pos], [405, 30])
 		button.connect("pressed", self, "to_"+btn)
 		self.add_child(button)
 		y_pos += 65
